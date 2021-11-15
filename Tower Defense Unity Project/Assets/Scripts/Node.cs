@@ -113,24 +113,29 @@ public class Node : MonoBehaviour {
 	void OnMouseEnter ()
 	{
 		if (EventSystem.current.IsPointerOverGameObject())
+        {
 			return;
+		}
 
 		if (!buildManager.CanBuild)
+        {
 			return;
+		}
 
 		if (buildManager.HasMoney)
 		{
 			rend.material.color = hoverColor;
-		} else
+		} 
+		else
 		{
 			rend.material.color = notEnoughMoneyColor;
 		}
-
 	}
 
 	void OnMouseExit ()
 	{
 		rend.material.color = startColor;
     }
-
 }
+
+

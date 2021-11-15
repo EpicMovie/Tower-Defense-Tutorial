@@ -17,8 +17,8 @@ public class Bullet : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	void Update () {
-
+	void Update () 
+	{
 		if (target == null)
 		{
 			Destroy(gameObject);
@@ -36,7 +36,6 @@ public class Bullet : MonoBehaviour {
 
 		transform.Translate(dir.normalized * distanceThisFrame, Space.World);
 		transform.LookAt(target);
-
 	}
 
 	void HitTarget ()
@@ -47,7 +46,8 @@ public class Bullet : MonoBehaviour {
 		if (explosionRadius > 0f)
 		{
 			Explode();
-		} else
+		}
+		else
 		{
 			Damage(target);
 		}
@@ -58,6 +58,7 @@ public class Bullet : MonoBehaviour {
 	void Explode ()
 	{
 		Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRadius);
+
 		foreach (Collider collider in colliders)
 		{
 			if (collider.tag == "Enemy")

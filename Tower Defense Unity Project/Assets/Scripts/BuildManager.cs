@@ -32,11 +32,13 @@ public class BuildManager : MonoBehaviour {
 			DeselectNode();
 			return;
 		}
+        else
+        {
+            selectedNode = node;
+            turretToBuild = null;
 
-		selectedNode = node;
-		turretToBuild = null;
-
-		nodeUI.SetTarget(node);
+            nodeUI.SetTarget(node);
+        }
 	}
 
 	public void DeselectNode()

@@ -24,7 +24,8 @@ public class PauseMenu : MonoBehaviour {
 		if (ui.activeSelf)
 		{
 			Time.timeScale = 0f;
-		} else
+		} 
+		else
 		{
 			Time.timeScale = 1f;
 		}
@@ -41,5 +42,5 @@ public class PauseMenu : MonoBehaviour {
 		Toggle();
 		sceneFader.FadeTo(menuSceneName);
 	}
-
 }
+

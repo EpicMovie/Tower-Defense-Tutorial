@@ -1,8 +1,8 @@
 using UnityEngine;
 using System.Collections;
 
-public class GameManager : MonoBehaviour {
-
+public class GameManager : MonoBehaviour 
+{
 	public static bool GameIsOver;
 
 	public GameObject gameOverUI;
@@ -14,9 +14,12 @@ public class GameManager : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
 		if (GameIsOver)
+        {
 			return;
+		}
 
 		if (PlayerStats.Lives <= 0)
 		{
@@ -35,5 +38,5 @@ public class GameManager : MonoBehaviour {
 		GameIsOver = true;
 		completeLevelUI.SetActive(true);
 	}
-
 }
+

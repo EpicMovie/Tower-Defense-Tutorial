@@ -1,6 +1,7 @@
 using UnityEngine;
 
-public class CameraController : MonoBehaviour {
+public class CameraController : MonoBehaviour 
+{
 
 	public float panSpeed = 30f;
 	public float panBorderThickness = 10f;
@@ -10,8 +11,8 @@ public class CameraController : MonoBehaviour {
 	public float maxY = 80f;
 
 	// Update is called once per frame
-	void Update () {
-
+	void Update () 
+	{
 		if (GameManager.GameIsOver)
 		{
 			this.enabled = false;
@@ -43,6 +44,6 @@ public class CameraController : MonoBehaviour {
 		pos.y = Mathf.Clamp(pos.y, minY, maxY);
 
 		transform.position = pos;
-
 	}
 }
+
